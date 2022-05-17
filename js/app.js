@@ -3,10 +3,7 @@ panels.forEach((panel) => {
   panel.addEventListener("click", (e) => {
     removeActiveClass();
     panel.classList.add("active");
-    //to radi
     panel.querySelector("h3").style="visibility: visible";
-
-//    console.log(panel.querySelector("h3"))
   });
 });
 
