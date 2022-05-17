@@ -1,13 +1,22 @@
-const panels=Array.from(document.getElementsByClassName("panel"));
+const panels = Array.from(document.getElementsByClassName("panel"));
+panels.forEach((panel) => {
+  panel.addEventListener("click", (e) => {
+    removeActiveClass();
+    panel.classList.add("active");
+    //to radi
+    panel.querySelector("h3").style="visibility: visible";
 
-
-panels.forEach(panel => {
-    panel.addEventListener('click',(e)=>{
-    //    removeActiveClass();
-    //  
-    console.log(e.target);
-    })
+//    console.log(panel.querySelector("h3"))
+  });
 });
+
+function removeActiveClass() {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+        //to radi
+   panel.querySelector("h3").style="visibility: hidden";
+  });
+}
 
 //1. callback (e)
 //uklanja sve aktivne klase
